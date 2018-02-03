@@ -14,6 +14,9 @@ public abstract class Product {
 			throw new IllegalArgumentException("Name is null or empty");
 		}
 		this.name = name;
+		if (price == null || price.signum() == -1) {
+			throw new IllegalArgumentException("Price is null or negative");
+		}
 		this.price = price;
 		this.taxPercent = tax;
 	}
