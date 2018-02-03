@@ -14,6 +14,7 @@ public abstract class Product {
 			throw new IllegalArgumentException("Name is null or empty");
 		}
 		this.name = name;
+		//if (price == null || price.compareTo(new BigDecimal(0)) < 0) {
 		if (price == null || price.signum() == -1) {
 			throw new IllegalArgumentException("Price is null or negative");
 		}
